@@ -5,10 +5,17 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/navigation_entrees">
 
+
     <fragment
         android:id="@+id/navigation_entrees"
         android:name="com.example.carte.ui.Entrées.EntreesFragment"
         android:label="@string/title_entree"
+        tools:layout="@layout/fragment_entree" />
+
+    <fragment
+        android:id="@+id/test_entree"
+        android:name="com.example.carte.ui.Entrées.EntreesFragment"
+        android:label="test"
         tools:layout="@layout/fragment_entree" />
 
     <fragment
@@ -28,4 +35,6 @@
         android:name="com.example.carte.ui.Boissons.BoissonsFragment"
         android:label="@string/title_boissons"
         tools:layout="@layout/fragment_boissons" />
+
+
 </navigation>
