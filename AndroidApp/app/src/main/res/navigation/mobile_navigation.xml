@@ -8,33 +8,51 @@
 
     <fragment
         android:id="@+id/navigation_entrees"
-        android:name="com.example.carte.ui.Entrées.EntreesFragment"
+        android:name="com.example.carte.ui.CarteResto.EntreesFragment"
         android:label="@string/title_entree"
         tools:layout="@layout/fragment_entree" />
 
-    <fragment
-        android:id="@+id/test_entree"
-        android:name="com.example.carte.ui.Entrées.EntreesFragment"
-        android:label="test"
-        tools:layout="@layout/fragment_entree" />
+
 
     <fragment
         android:id="@+id/navigation_plats"
-        android:name="com.example.carte.ui.Plats.PlatsFragment"
+        android:name="com.example.carte.ui.CarteResto.PlatsFragment"
         android:label="@string/title_plats"
         tools:layout="@layout/fragment_plats" />
 
     <fragment
         android:id="@+id/navigation_desserts"
-        android:name="com.example.carte.ui.Desserts.DessertsFragment"
+        android:name="com.example.carte.ui.CarteResto.DessertsFragment"
         android:label="@string/title_desserts"
         tools:layout="@layout/fragment_dessert" />
 
     <fragment
         android:id="@+id/navigation_boissons"
-        android:name="com.example.carte.ui.Boissons.BoissonsFragment"
+        android:name="com.example.carte.ui.CarteResto.BoissonsFragment"
         android:label="@string/title_boissons"
         tools:layout="@layout/fragment_boissons" />
 
+    <fragment
+        android:id="@+id/navigation_menu1"
+        android:name="com.example.carte.ui.Menus.Menu1Fragment"
+        android:label="Menu 1"
+        tools:layout="@layout/fragment_menu1" />
 
+    <fragment
+        android:id="@+id/navigation_menu2"
+        android:name="com.example.carte.ui.Menus.Menu2Fragment"
+        android:label="Menu 2"
+        tools:layout="@layout/fragment_menu2" />
+
+    <fragment
+        android:id="@+id/navigation_menu3"
+        android:name="com.example.carte.ui.Menus.Menu3Fragment"
+        android:label="Menu 3"
+        tools:layout="@layout/fragment_menu3" />
+
+    <fragment
+        android:id="@+id/navigation_menu4"
+        android:name="com.example.carte.ui.Menus.Menu4Fragment"
+        android:label="Menu 4"
+        tools:layout="@layout/fragment_menu4" />
 </navigation>

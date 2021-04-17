@@ -1,17 +1,12 @@
-package com.example.carte.ui.Desserts;
+package com.example.carte.ui.Menus;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -20,11 +15,10 @@ import com.example.carte.ui.CustomAdapter;
 import com.example.carte.ui.ItemData;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
-public class DessertsFragment extends Fragment {
+public class Menu4Fragment extends Fragment {
 
-    private String[] dessertsListe;
+    private String[] boissonsListe;
     private String[] drawablesListe;
 
     private RecyclerView recyclerView;
@@ -32,17 +26,18 @@ public class DessertsFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_dessert, container, false);
 
-        dessertsListe = getResources().getStringArray(R.array.dessertsListe);
-        drawablesListe = getResources().getStringArray(R.array.dessertsDrawable);
-        recyclerView = root.findViewById(R.id.recyclerViewDesserts);
+        View root = inflater.inflate(R.layout.fragment_menu4, container, false);
+
+        boissonsListe = getResources().getStringArray(R.array.boissonsListe);
+        drawablesListe = getResources().getStringArray(R.array.boissonsDrawable);
+        recyclerView = root.findViewById(R.id.recyclerViewMenu);
 
         // created new array list..
         itemArrayList = new ArrayList<>();
-        for (int i=0;i<dessertsListe.length;i++){
+        for (int i=0;i<boissonsListe.length;i++){
             int resourceId = getResources().getIdentifier(drawablesListe[i], "drawable",getContext().getPackageName());
-            itemArrayList.add(new ItemData(dessertsListe[i],resourceId));
+            itemArrayList.add(new ItemData(boissonsListe[i],resourceId));
         }
 
         // added data from arraylist to adapter class.
@@ -55,6 +50,7 @@ public class DessertsFragment extends Fragment {
         // at last set adapter to recycler view.
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
+
         return root;
     }
 }
