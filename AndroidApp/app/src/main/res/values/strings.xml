@@ -90,4 +90,117 @@
         <item>chocolat_chaud</item>
     </string-array>
 
+
+    <string-array name="menu1entrees">
+        <item>Wrap au poulet</item>
+        <item>Tapas</item>
+    </string-array>
+    <string-array name="menu1entreesDrawable">
+        <item>wrap</item>
+        <item>tapas</item>
+    </string-array>
+
+    <string-array name="menu1plats">
+        <item>Burger</item>
+        <item>Pizza</item>
+    </string-array>
+    <string-array name="menu1platsDrawable">
+        <item>burger</item>
+        <item>pizza</item>
+    </string-array>
+
+    <string-array name="menu1desserts">
+        <item>Wrap au poulet</item>
+        <item>Tomates</item>
+        <item>Tapas</item>
+    </string-array>
+    <string-array name="menu1dessertsDrawable">
+        <item>pancake</item>
+        <item>chocolat</item>
+    </string-array>
+
+    <string-array name="menu2entrees">
+        <item>Wrap au poulet</item>
+        <item>Tapas</item>
+    </string-array>
+    <string-array name="menu2entreesDrawable">
+        <item>wrap</item>
+        <item>tapas</item>
+    </string-array>
+
+    <string-array name="menu2plats">
+        <item>Burger</item>
+        <item>Pizza</item>
+    </string-array>
+    <string-array name="menu2platsDrawable">
+        <item>burger</item>
+        <item>pizza</item>
+    </string-array>
+
+    <string-array name="menu2desserts">
+        <item>Wrap au poulet</item>
+        <item>Tomates</item>
+        <item>Tapas</item>
+    </string-array>
+    <string-array name="menu2dessertsDrawable">
+        <item>pancake</item>
+        <item>chocolat</item>
+    </string-array>
+
+    <string-array name="menu3entrees">
+        <item>Wrap au poulet</item>
+        <item>Tapas</item>
+    </string-array>
+    <string-array name="menu3entreesDrawable">
+        <item>wrap</item>
+        <item>tapas</item>
+    </string-array>
+
+    <string-array name="menu3plats">
+        <item>Burger</item>
+        <item>Pizza</item>
+    </string-array>
+    <string-array name="menu3platsDrawable">
+        <item>burger</item>
+        <item>pizza</item>
+    </string-array>
+
+    <string-array name="menu3desserts">
+        <item>Wrap au poulet</item>
+        <item>Tomates</item>
+        <item>Tapas</item>
+    </string-array>
+    <string-array name="menu3dessertsDrawable">
+        <item>pancake</item>
+        <item>chocolat</item>
+    </string-array>
+
+    <string-array name="menu4entrees">
+        <item>Wrap au poulet</item>
+        <item>Tapas</item>
+    </string-array>
+    <string-array name="menu4entreesDrawable">
+        <item>wrap</item>
+        <item>tapas</item>
+    </string-array>
+
+    <string-array name="menu4plats">
+        <item>Burger</item>
+        <item>Pizza</item>
+    </string-array>
+    <string-array name="menu4platsDrawable">
+        <item>burger</item>
+        <item>pizza</item>
+    </string-array>
+
+    <string-array name="menu4desserts">
+        <item>Wrap au poulet</item>
+        <item>Tomates</item>
+        <item>Tapas</item>
+    </string-array>
+    <string-array name="menu4dessertsDrawable">
+        <item>pancake</item>
+        <item>chocolat</item>
+    </string-array>
+
 </resources>

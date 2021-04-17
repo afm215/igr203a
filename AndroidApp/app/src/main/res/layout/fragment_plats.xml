@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="60dp"
-    tools:context=".ui.Plats.PlatsFragment">
+    tools:context=".ui.CarteResto.PlatsFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewPlats"
+        android:id="@+id/recyclerViewCarte"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </androidx.recyclerview.widget.RecyclerView>
