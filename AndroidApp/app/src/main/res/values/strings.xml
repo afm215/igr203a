@@ -9,11 +9,11 @@
     <string-array name="entreesListe">
         <item>Wrap au poulet</item>
         <item>Pastèque</item>
-        <item>Tomates mozzarella</item>
+        <item>Tomates</item>
         <item>Tapas</item>
         <item>Wrap au poulet</item>
         <item>Pastèque</item>
-        <item>Tomates mozzarella</item>
+        <item>Tomates</item>
         <item>Tapas</item>
     </string-array>
     <string-array name="entreesDrawables">
@@ -43,7 +43,7 @@
         <item>pizza</item>
         <item>rice</item>
         <item>burger</item>
-        <item>poisson</item>
+        <item>fish</item>
         <item>pizza</item>
         <item>rice</item>
     </string-array>
