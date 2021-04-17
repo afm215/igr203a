@@ -1,8 +1,12 @@
 package com.example.carte;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.NavGraph;
 import androidx.navigation.NavOptions;
@@ -12,8 +16,9 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomnavigation.LabelVisibilityMode;
+import com.google.android.material.navigation.NavigationView;
 
-public class MainActivityMenu extends AppCompatActivity {
+public class MainActivityMenu   extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +38,34 @@ public class MainActivityMenu extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
+
+
+        NavigationView navigationView = findViewById(R.id.humberger_view);
+        //NavigationUI.setupWithNavController(navigationView, navController);
+        navigationView.setNavigationItemSelectedListener(this);
+        /*DrawerLayout drawer = findViewById(R.id.drawer_layout);
+
+        AppBarConfiguration mAppBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.nav_cartes, R.id.nav_commande, R.id.nav_langues)
+                .setDrawerLayout(drawer)
+                .build();*/
+        //NavController navControllersecond = Navigation.findNavController(this, R.id.nav_host_fragment);
+        //NavigationUI.setupActionBarWithNavController(this, navControllersecond, mAppBarConfiguration);
+        //NavigationUI.setupWithNavController(navigationView, navController);
+
         navView.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
 
     }
 
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.nav_cartes:
+                System.out.println("cliiiiiiiicked");
+                startActivity(new Intent(MainActivityMenu.this,MainActivityCarte.class));
+                break;
+        }
+        return true;
+    }
 }

@@ -55,4 +55,11 @@
         android:name="com.example.carte.ui.Menus.Menu4Fragment"
         android:label="Menu 4"
         tools:layout="@layout/fragment_menu4" />
+    <fragment
+        android:id="@+id/nav_cartes"
+        android:name="com.example.carte.MainActivityCarte"
+        android:label="carte"
+        tools:layout="@layout/fragment_menu4"/>
+
+    
 </navigation>

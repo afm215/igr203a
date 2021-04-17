@@ -42,7 +42,7 @@
 
 </androidx.constraintlayout.widget.ConstraintLayout>
     <com.google.android.material.navigation.NavigationView
-        android:id="@+id/hhuberger_view"
+        android:id="@+id/humberger_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
