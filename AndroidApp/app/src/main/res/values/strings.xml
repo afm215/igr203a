@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">Carte</string>
+    <string name="title_entree">Entrées</string>
+    <string name="title_plats">Plats</string>
+    <string name="title_desserts">Desserts</string>
+    <string name="title_boissons">Boissons</string>
+
+
+    <string-array name="entreesListe">
+        <item>Wrap au poulet</item>
+        <item>Pastèque</item>
+        <item>Tomates mozzarella</item>
+        <item>Tapas</item>
+        <item>Wrap au poulet</item>
+        <item>Pastèque</item>
+        <item>Tomates mozzarella</item>
+        <item>Tapas</item>
+    </string-array>
+    <string-array name="entreesDrawables">
+        <item>wrap</item>
+        <item>pasteque</item>
+        <item>tomates</item>
+        <item>tapas</item>
+        <item>wrap</item>
+        <item>pasteque</item>
+        <item>tomates</item>
+        <item>tapas</item>
+    </string-array>
+
+    <string-array name="platsListe">
+        <item>Burger du chef</item>
+        <item>Poisson du jour</item>
+        <item>Pizza</item>
+        <item>Bol de riz</item>
+        <item>Burger du chef</item>
+        <item>Poisson du jour</item>
+        <item>Pizza</item>
+        <item>Bol de riz</item>
+    </string-array>
+    <string-array name="platsDrawable">
+        <item>burger</item>
+        <item>fish</item>
+        <item>pizza</item>
+        <item>rice</item>
+        <item>burger</item>
+        <item>poisson</item>
+        <item>pizza</item>
+        <item>rice</item>
+    </string-array>
+
+    <string-array name="dessertsListe">
+        <item>Glace 3 boules</item>
+        <item>Chocolat</item>
+        <item>Pancakes</item>
+        <item>Donut</item>
+        <item>Glace 3 boules</item>
+        <item>Chocolat</item>
+        <item>Pancakes</item>
+        <item>Donut</item>
+    </string-array>
+    <string-array name="dessertsDrawable">
+        <item>glace</item>
+        <item>chocolat</item>
+        <item>pancake</item>
+        <item>donut</item>
+        <item>glace</item>
+        <item>chocolat</item>
+        <item>pancake</item>
+        <item>donut</item>
+    </string-array>
+
+    <string-array name="boissonsListe">
+        <item>Soda</item>
+        <item>Vin rouge</item>
+        <item>Eau</item>
+        <item>Chocolat Chaud</item>
+        <item>Soda</item>
+        <item>Vin rouge</item>
+        <item>Eau</item>
+        <item>Chocolat Chaud</item>
+    </string-array>
+    <string-array name="boissonsDrawable">
+        <item>soda</item>
+        <item>vin</item>
+        <item>water</item>
+        <item>chocolat_chaud</item>
+        <item>soda</item>
+        <item>vin</item>
+        <item>water</item>
+        <item>chocolat_chaud</item>
+    </string-array>
+
+</resources>
