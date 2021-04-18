@@ -42,7 +42,7 @@ public class EntreesFragment extends Fragment {
         }
 
         // added data from arraylist to adapter class.
-        CustomAdapter adapter=new CustomAdapter(itemArrayList);
+        CustomAdapter adapter=new CustomAdapter(itemArrayList,getContext());
 
         // setting grid layout manager to implement grid view.
         // in this method '2' represents number of columns to be displayed in grid view.

@@ -21,7 +21,7 @@
     <fragment
         android:id="@+id/navigation_desserts"
         android:name="com.example.carte.ui.CarteResto.DessertsFragment"
-        android:label="Car"
+        android:label="Carte"
         tools:layout="@layout/fragment_dessert" />
 
     <fragment

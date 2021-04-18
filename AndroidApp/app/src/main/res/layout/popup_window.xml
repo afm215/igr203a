@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/custom_border2"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textePopup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Poissons"
+            android:textColor="#1E90FF"
+            android:textSize="30dp"
+            android:layout_gravity="center"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="8dp"/>
+
+        <ImageButton
+            android:id="@+id/quitPopUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4B0082"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_cancel"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10 mins"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18 €"
+            android:textSize="20dp"
+            android:padding="5dp"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="80pt"
+        android:layout_height="80pt"
+        android:layout_row="1"
+        android:id="@+id/imagePopup"
+        android:layout_column="0"
+        android:src="@drawable/ic_home_black_24dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Partageable"
+        android:textSize="20dp"
+        android:padding="5dp"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/custom_border">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description : Saumon sauce beurre aux noix grillées"
+            android:textColor="#1E90FF"
+            android:textSize="20dp"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Allergènes : Noix"
+            android:textColor="#1E90FF"
+            android:textSize="20dp"
+            android:layout_alignParentLeft="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menus Associés"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:background="@color/white">
+        </Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recommandations"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:background="@color/white">
+        </Button>
+
+    </LinearLayout>
+
+</LinearLayout>
+

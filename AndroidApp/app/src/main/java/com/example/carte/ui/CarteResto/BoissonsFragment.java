@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -41,7 +43,7 @@ public class BoissonsFragment extends Fragment {
         }
 
         // added data from arraylist to adapter class.
-        CustomAdapter adapter=new CustomAdapter(itemArrayList);
+        CustomAdapter adapter=new CustomAdapter(itemArrayList,getContext());
 
         // setting grid layout manager to implement grid view.
         // in this method '2' represents number of columns to be displayed in grid view.
@@ -50,6 +52,7 @@ public class BoissonsFragment extends Fragment {
         // at last set adapter to recycler view.
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
+
 
         return root;
     }
