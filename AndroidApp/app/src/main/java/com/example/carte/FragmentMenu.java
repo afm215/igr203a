@@ -36,7 +36,7 @@ public class FragmentMenu extends Fragment {
                 R.id.navigation_menu1, R.id.navigation_menu2, R.id.navigation_menu3, R.id.navigation_menu4)
                 .build();
 
-        View navhost = root.findViewById(R.id.nav_host_fragment_carte);
+        View navhost = root.findViewById(R.id.nav_host_fragment_menu);
         NavController navController = Navigation.findNavController(navhost);
 
         NavGraph graph = navController.getGraph();
