@@ -26,6 +26,7 @@ import com.google.android.material.snackbar.Snackbar;
 public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration appBarConfiguration;
     public NavController navController;
+    public int numeroDeTable = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
