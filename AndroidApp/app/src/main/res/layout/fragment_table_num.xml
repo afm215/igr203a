@@ -26,7 +26,7 @@
         android:layout_centerVertical="true"
         android:ems="10"/>
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editText"

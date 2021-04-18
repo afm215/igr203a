@@ -69,8 +69,14 @@
     <fragment
         android:id="@+id/navigation_table_num"
         android:name="com.example.carte.TableNum"
-        tools:layout="@layout/fragment_table_num"
-        />
+        tools:layout="@layout/fragment_table_num">
+
+    <action
+        android:id="@+id/action_validatenum"
+        app:destination="@id/navigation_carte"/>
+
+
+        </fragment>
 
     
 </navigation>
