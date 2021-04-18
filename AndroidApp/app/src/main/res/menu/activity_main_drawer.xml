@@ -11,10 +11,10 @@
             android:id="@+id/navigation_menus"
             android:title="Les Menus" />
         <item
-            android:id="@+id/nav_commande"
+            android:id="@+id/navigation_commande"
             android:title="Ma Commande" />
         <item
-            android:id="@+id/nav_langues"
+            android:id="@+id/navigation_langue"
             android:title="Langue"/>
     </group>
 </menu>

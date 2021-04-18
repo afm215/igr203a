@@ -72,5 +72,12 @@
         tools:layout="@layout/fragment_table_num"
         />
 
+    <fragment
+        android:id="@+id/navigation_commande"
+        android:name="com.example.carte.FragmentCommande"
+        android:label="Commande"
+        tools:layout="@layout/fragment_commande"
+        />
+
     
 </navigation>
