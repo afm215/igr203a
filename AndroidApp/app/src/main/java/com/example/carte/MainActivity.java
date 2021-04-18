@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavGraph graph = navController.getGraph();
-        graph.setStartDestination(R.id.navigation_carte);
+        graph.setStartDestination(R.id.navigation_table_num);
         navController.setGraph(graph);
 
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);

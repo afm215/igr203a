@@ -67,9 +67,9 @@
         tools:layout="@layout/fragment_menus" />
 
     <fragment
-        android:id="@+id/table_num"
+        android:id="@+id/navigation_table_num"
         android:name="com.example.carte.TableNum"
-        
+        tools:layout="@layout/fragment_table_num"
         />
 
     
