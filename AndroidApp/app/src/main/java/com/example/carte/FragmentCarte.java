@@ -35,18 +35,18 @@ public class FragmentCarte extends Fragment {
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_entrees, R.id.navigation_plats, R.id.navigation_desserts,R.id.navigation_boissons)
                 .build();
-        NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_carte);
+
+        View navhost = root.findViewById(R.id.nav_host_fragment_carte);
+        NavController navController = Navigation.findNavController(navhost);
+
         NavGraph graph = navController.getGraph();
         graph.setStartDestination(R.id.navigation_entrees);
         navController.setGraph(graph);
-
 
         NavigationUI.setupActionBarWithNavController((AppCompatActivity) getActivity(), navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
         navView.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
-
-
 
         return root;
     }

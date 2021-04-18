@@ -35,7 +35,10 @@ public class FragmentMenu extends Fragment {
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_menu1, R.id.navigation_menu2, R.id.navigation_menu3, R.id.navigation_menu4)
                 .build();
-        NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_menu);
+
+        View navhost = root.findViewById(R.id.nav_host_fragment_carte);
+        NavController navController = Navigation.findNavController(navhost);
+
         NavGraph graph = navController.getGraph();
         graph.setStartDestination(R.id.navigation_menu1);
         navController.setGraph(graph);

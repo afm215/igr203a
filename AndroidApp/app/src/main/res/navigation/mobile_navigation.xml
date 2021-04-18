@@ -57,13 +57,13 @@
     <fragment
         android:id="@+id/navigation_carte"
         android:name="com.example.carte.FragmentCarte"
-        android:label="Menus"
+        android:label="Carte"
         tools:layout="@layout/fragment_carte" />
 
     <fragment
         android:id="@+id/navigation_menus"
         android:name="com.example.carte.FragmentMenu"
-        android:label="Carte"
+        android:label="Menus"
         tools:layout="@layout/fragment_menus" />
 
     

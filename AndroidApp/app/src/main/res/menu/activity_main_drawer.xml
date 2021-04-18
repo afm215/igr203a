@@ -5,10 +5,10 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_cartes"
+            android:id="@+id/navigation_carte"
             android:title="La Carte" />
         <item
-            android:id="@+id/nav_menus"
+            android:id="@+id/navigation_menus"
             android:title="Les Menus" />
         <item
             android:id="@+id/nav_commande"
