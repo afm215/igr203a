@@ -60,12 +60,38 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView textView;
         private ImageView imageView;
+        private ImageView minus;
+        private ImageView plus;
+        private TextView amount;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             textView = itemView.findViewById(R.id.textView);
             imageView = itemView.findViewById(R.id.imageView);
 
             ImageButton infoIcon = itemView.findViewById(R.id.info_icon);
+            amount = itemView.findViewById(R.id.amount);
+            minus = itemView.findViewById(R.id.imageView3);
+            plus = itemView.findViewById(R.id.imageView2);
+
+            minus.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    System.out.println("Waaaaaarining");
+                    System.out.println(amount.getText().toString());
+                    int quantity = Integer.parseInt(amount.getText().toString());
+                    if (quantity >0){
+                        quantity --;
+                        amount.setText(Integer.toString(quantity));
+                    }
+                }
+            });
+
+            plus.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    amount.setText(Integer.toString(Integer.parseInt(amount.getText().toString()) + 1));
+                }
+            });
 
 
             infoIcon.setOnClickListener(new View.OnClickListener() {

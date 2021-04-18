@@ -73,14 +73,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/imageView3"
             android:layout_width="20pt"
             android:layout_height="20pt"
             android:layout_gravity="center"
             android:src="@drawable/ic_minus" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/imageView2"
             android:layout_width="20pt"
             android:layout_height="20pt"
@@ -88,6 +88,7 @@
             android:src="@drawable/ic_plus" />
 
         <TextView
+            android:id="@+id/amount"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="0"
