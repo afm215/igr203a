@@ -140,7 +140,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
                                 @Override
                                 public boolean onMenuItemClick(MenuItem menuItem) {
                                     // Toast message on menu item clicked
-                                    Toast.makeText(context, menuItem.getItemId(), Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(context, menuItem.getTitle(), Toast.LENGTH_SHORT).show();
                                     return true;
                                 }
                             });
