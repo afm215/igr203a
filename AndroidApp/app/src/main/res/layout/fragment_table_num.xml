@@ -6,17 +6,22 @@
     tools:context=".TableNum">
 
     <!-- TODO: Update blank fragment layout -->
-    <RelativeLayout
+    <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity"
+        android:gravity="center"
+        android:orientation="vertical">
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Numero de table"
-        android:textSize="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:text="Veuillez entrer votre numéro de table"
+        android:textSize="30dp"
+        android:layout_marginBottom="20dp"
         />
     <EditText
         android:id="@+id/editText"
@@ -34,6 +39,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="26dp"
         android:text="Valider"/>
-    </RelativeLayout>
+    </LinearLayout>
 
 </FrameLayout>

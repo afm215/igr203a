@@ -16,5 +16,9 @@
         <item
             android:id="@+id/navigation_langue"
             android:title="Langue"/>
+
+        <item
+            android:id="@+id/navigation_table_num"
+            android:title="Numéro de table"/>
     </group>
 </menu>
