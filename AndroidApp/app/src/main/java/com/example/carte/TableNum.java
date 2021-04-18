@@ -22,7 +22,6 @@ public class TableNum extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println("Yoooooo!");
                ((MainActivity)getActivity()).navController.navigate(R.id.navigation_carte);
             }
         });
