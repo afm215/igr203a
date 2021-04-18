@@ -12,8 +12,6 @@
         android:label="@string/title_entree"
         tools:layout="@layout/fragment_entree" />
 
-
-
     <fragment
         android:id="@+id/navigation_plats"
         android:name="com.example.carte.ui.CarteResto.PlatsFragment"
@@ -55,6 +53,18 @@
         android:name="com.example.carte.ui.Menus.Menu4Fragment"
         android:label="Menu 4"
         tools:layout="@layout/fragment_menu4" />
+
+    <fragment
+        android:id="@+id/navigation_carte"
+        android:name="com.example.carte.FragmentCarte"
+        android:label="Menus"
+        tools:layout="@layout/fragment_carte" />
+
+    <fragment
+        android:id="@+id/navigation_menus"
+        android:name="com.example.carte.FragmentMenu"
+        android:label="Carte"
+        tools:layout="@layout/fragment_menus" />
 
     
 </navigation>
