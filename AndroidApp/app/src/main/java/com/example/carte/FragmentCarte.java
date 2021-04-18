@@ -43,7 +43,6 @@ public class FragmentCarte extends Fragment {
         graph.setStartDestination(R.id.navigation_entrees);
         navController.setGraph(graph);
 
-        NavigationUI.setupActionBarWithNavController((AppCompatActivity) getActivity(), navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
         navView.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
