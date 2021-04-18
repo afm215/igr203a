@@ -1,15 +1,16 @@
 package com.example.carte.ui;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupMenu;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -97,6 +98,48 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
                         @Override
                         public void onClick(View v) {
                             popupWindow.dismiss();
+                        }
+                    });
+                    Button recommendation = popupView.findViewById(R.id.recommendations);
+                    Button menusAssocies = popupView.findViewById(R.id.menusAssocies);
+                    recommendation.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            // Initializing the popup menu and giving the reference as current context
+                            PopupMenu popupMenu = new PopupMenu(context, recommendation);
+
+                            // Inflating popup menu from popup_menu.xml file
+                            popupMenu.getMenuInflater().inflate(R.menu.popup_recommandation, popupMenu.getMenu());
+                            popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                                @Override
+                                public boolean onMenuItemClick(MenuItem menuItem) {
+                                    // Toast message on menu item clicked
+                                    Toast.makeText(context, menuItem.getItemId(), Toast.LENGTH_SHORT).show();
+                                    return true;
+                                }
+                            });
+                            // Showing the popup menu
+                            popupMenu.show();
+                        }
+                    });
+                    menusAssocies.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            // Initializing the popup menu and giving the reference as current context
+                            PopupMenu popupMenu = new PopupMenu(context, menusAssocies);
+
+                            // Inflating popup menu from popup_menu.xml file
+                            popupMenu.getMenuInflater().inflate(R.menu.popup_menus, popupMenu.getMenu());
+                            popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                                @Override
+                                public boolean onMenuItemClick(MenuItem menuItem) {
+                                    // Toast message on menu item clicked
+                                    Toast.makeText(context, menuItem.getTitle(), Toast.LENGTH_SHORT).show();
+                                    return true;
+                                }
+                            });
+                            // Showing the popup menu
+                            popupMenu.show();
                         }
                     });
 
