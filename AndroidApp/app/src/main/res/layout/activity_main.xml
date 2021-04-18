@@ -27,7 +27,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="@color/purple_500"
-                 />
+                 >
+            <EditText
+                android:hint="Rechercher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            </androidx.appcompat.widget.Toolbar>
 
         </com.google.android.material.appbar.AppBarLayout>
         //
