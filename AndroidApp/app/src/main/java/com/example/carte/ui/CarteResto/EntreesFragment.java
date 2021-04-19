@@ -55,7 +55,11 @@ public class EntreesFragment extends Fragment {
         // at last set adapter to recycler view.
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
-
+        ArrayList<Integer> listOfResources = new ArrayList<>();
+        for (int i=0;i<entreesListes.length;i++){
+            int resourceId = getResources().getIdentifier(drawablesListe[i], "drawable", getContext().getPackageName());
+            listOfResources.add(resourceId);
+        }
         EditText editResearch  = ((MainActivity) getActivity()).searchfield;
         editResearch.addTextChangedListener(new TextWatcher() {
             @Override
@@ -69,7 +73,7 @@ public class EntreesFragment extends Fragment {
                 itemArrayList = new ArrayList<>();
                 for (int i=0;i<entreesListes.length;i++){
                     if (entreesListes[i].toLowerCase().contains(s.toString().trim().toLowerCase())) {
-                        int resourceId = getResources().getIdentifier(drawablesListe[i], "drawable", getContext().getPackageName());
+                        int resourceId = listOfResources.get(i);
                         itemArrayList.add(new ItemData(entreesListes[i], resourceId));
                     }
                 }
