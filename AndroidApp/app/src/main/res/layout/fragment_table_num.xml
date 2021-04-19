@@ -29,8 +29,9 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:ems="10"
-        android:inputType="numberDecimal"/>
+        android:ems="7"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"/>
     <Button
         android:id="@+id/button_num"
         android:layout_width="wrap_content"
