@@ -133,30 +133,30 @@
     </string-array>
 
     <string-array name="menu2entrees">
-        <item>Wrap au poulet</item>
+        <item>Tomates</item>
         <item>Tapas</item>
     </string-array>
     <string-array name="menu2entreesDrawable">
-        <item>wrap</item>
+        <item>tomates</item>
         <item>tapas</item>
     </string-array>
 
     <string-array name="menu2plats">
-        <item>Burger</item>
-        <item>Pizza</item>
+        <item>Poisson</item>
+        <item>Bol de riz</item>
     </string-array>
     <string-array name="menu2platsDrawable">
-        <item>burger</item>
-        <item>pizza</item>
+        <item>fish</item>
+        <item>rice</item>
     </string-array>
 
     <string-array name="menu2desserts">
-        <item>Pancakes</item>
-        <item>Chocolat</item>
+        <item>Donut</item>
+        <item>Pastèque</item>
     </string-array>
     <string-array name="menu2dessertsDrawable">
-        <item>pancake</item>
-        <item>chocolat</item>
+        <item>donut</item>
+        <item>pasteque</item>
     </string-array>
 
     <string-array name="menu3entrees">

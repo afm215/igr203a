@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -60,7 +61,14 @@ public class FragmentCommande extends Fragment {
                         popupWindow.dismiss();
                     }
                 });
-
+                Button validateCommande = popupView.findViewById(R.id.sendCommandButton);
+                validateCommande.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(getContext(),"Commande bien prise en compte !",Toast.LENGTH_SHORT).show();
+                        popupWindow.dismiss();
+                    }
+                });
             }
         });
 
