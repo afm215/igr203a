@@ -88,8 +88,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
                 minus.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        System.out.println("Waaaaaarining");
-                        System.out.println(amount.getText().toString());
                         int quantity = Integer.parseInt(amount.getText().toString());
                         if (quantity >0){
                             quantity --;
