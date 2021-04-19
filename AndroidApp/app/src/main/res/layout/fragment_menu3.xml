@@ -1,16 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="60dp"
-    tools:context=".ui.CarteResto.PlatsFragment">
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewMenu"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </androidx.recyclerview.widget.RecyclerView>
+        android:layout_height="match_parent"
+        android:paddingBottom="60dp"
+        tools:context=".ui.Menu.Menu3Fragment">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/entreeMenu"
+            android:padding="10dp"
+            app:layout_constraintBottom_toTopOf="@id/recyclerViewMenuEntree"
+            android:text="Les Entrées"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMenuEntree"
+            app:layout_constraintTop_toBottomOf="@id/entreeMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewMenuEntree"
+            android:id="@+id/platsMenu"
+            android:padding="10dp"
+            app:layout_constraintBottom_toTopOf="@id/recyclerViewMenuPlat"
+            android:text="Les Plats"
+            android:layout_height="wrap_content" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMenuPlat"
+            app:layout_constraintTop_toBottomOf="@id/platsMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dessertsMenu"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewMenuPlat"
+            android:padding="10dp"
+            app:layout_constraintBottom_toTopOf="@id/recyclerViewMenuDessert"
+            android:text="Les Desserts"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMenuDessert"
+            app:layout_constraintTop_toBottomOf="@id/dessertsMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

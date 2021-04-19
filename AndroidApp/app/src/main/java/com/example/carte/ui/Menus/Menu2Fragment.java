@@ -18,39 +18,90 @@ import java.util.ArrayList;
 
 public class Menu2Fragment extends Fragment {
 
-    private String[] platsListe;
-    private String[] drawablesListe;
+    private String[] listeEntree;
+    private String[] listeDessert;
+    private String[] listePlats;
+    private String[] entreeDrawable;
+    private String[] platDrawable;
+    private String[] dessertDrawable;
 
-    private RecyclerView recyclerView;
+    private RecyclerView recyclerViewEntree;
+    private RecyclerView recyclerViewPlats;
+    private RecyclerView recyclerViewDessert;
     private ArrayList<ItemData> itemArrayList;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_menu2, container, false);
 
-        platsListe = getResources().getStringArray(R.array.platsListe);
-        drawablesListe = getResources().getStringArray(R.array.platsDrawable);
+        listeEntree = getResources().getStringArray(R.array.menu2entrees);
+        entreeDrawable = getResources().getStringArray(R.array.menu2entreesDrawable);
 
-        recyclerView = root.findViewById(R.id.recyclerViewMenu);
-
+        recyclerViewEntree = root.findViewById(R.id.recyclerViewMenuEntree);
 
         // created new array list..
         itemArrayList = new ArrayList<>();
-        for (int i=0;i<platsListe.length;i++){
-            int resourceId = getResources().getIdentifier(drawablesListe[i], "drawable",getContext().getPackageName());
-            itemArrayList.add(new ItemData(platsListe[i],resourceId));
+        for (int i=0;i<listeEntree.length;i++){
+            int resourceId = getResources().getIdentifier(entreeDrawable[i], "drawable", getContext().getPackageName());
+            itemArrayList.add(new ItemData(listeEntree[i],resourceId));
         }
 
         // added data from arraylist to adapter class.
-        CustomAdapter adapter=new CustomAdapter(itemArrayList,getContext());
+        CustomAdapter adapter=new CustomAdapter(itemArrayList,getContext(),1);
 
         // setting grid layout manager to implement grid view.
         // in this method '2' represents number of columns to be displayed in grid view.
         GridLayoutManager layoutManager=new GridLayoutManager(getContext(),2);
 
         // at last set adapter to recycler view.
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(adapter);
+        recyclerViewEntree.setLayoutManager(layoutManager);
+        recyclerViewEntree.setAdapter(adapter);
+
+        listePlats = getResources().getStringArray(R.array.menu2plats);
+        platDrawable = getResources().getStringArray(R.array.menu2platsDrawable);
+
+        recyclerViewPlats = root.findViewById(R.id.recyclerViewMenuPlat);
+
+        // created new array list..
+        itemArrayList = new ArrayList<>();
+        for (int i=0;i<listePlats.length;i++){
+            int resourceId = getResources().getIdentifier(platDrawable[i], "drawable", getContext().getPackageName());
+            itemArrayList.add(new ItemData(listePlats[i],resourceId));
+        }
+
+        // added data from arraylist to adapter class.
+        CustomAdapter adapter2=new CustomAdapter(itemArrayList,getContext(),1);
+
+        // setting grid layout manager to implement grid view.
+        // in this method '2' represents number of columns to be displayed in grid view.
+        GridLayoutManager layoutManager2=new GridLayoutManager(getContext(),2);
+
+        // at last set adapter to recycler view.
+        recyclerViewPlats.setLayoutManager(layoutManager2);
+        recyclerViewPlats.setAdapter(adapter2);
+
+        listeDessert = getResources().getStringArray(R.array.menu2desserts);
+        dessertDrawable = getResources().getStringArray(R.array.menu2dessertsDrawable);
+
+        recyclerViewDessert = root.findViewById(R.id.recyclerViewMenuDessert);
+
+        // created new array list..
+        itemArrayList = new ArrayList<>();
+        for (int i=0;i<listeDessert.length;i++){
+            int resourceId = getResources().getIdentifier(dessertDrawable[i], "drawable", getContext().getPackageName());
+            itemArrayList.add(new ItemData(listeDessert[i],resourceId));
+        }
+
+        // added data from arraylist to adapter class.
+        CustomAdapter adapter3=new CustomAdapter(itemArrayList,getContext(),1);
+
+        // setting grid layout manager to implement grid view.
+        // in this method '2' represents number of columns to be displayed in grid view.
+        GridLayoutManager layoutManager3=new GridLayoutManager(getContext(),2);
+
+        // at last set adapter to recycler view.
+        recyclerViewDessert.setLayoutManager(layoutManager3);
+        recyclerViewDessert.setAdapter(adapter3);
 
         return root;
     }

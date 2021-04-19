@@ -124,9 +124,8 @@
     </string-array>
 
     <string-array name="menu1desserts">
-        <item>Wrap au poulet</item>
-        <item>Tomates</item>
-        <item>Tapas</item>
+        <item>Pancakes</item>
+        <item>Chocolat</item>
     </string-array>
     <string-array name="menu1dessertsDrawable">
         <item>pancake</item>
@@ -152,9 +151,8 @@
     </string-array>
 
     <string-array name="menu2desserts">
-        <item>Wrap au poulet</item>
-        <item>Tomates</item>
-        <item>Tapas</item>
+        <item>Pancakes</item>
+        <item>Chocolat</item>
     </string-array>
     <string-array name="menu2dessertsDrawable">
         <item>pancake</item>
@@ -180,9 +178,8 @@
     </string-array>
 
     <string-array name="menu3desserts">
-        <item>Wrap au poulet</item>
-        <item>Tomates</item>
-        <item>Tapas</item>
+        <item>Pancakes</item>
+        <item>Chocolat</item>
     </string-array>
     <string-array name="menu3dessertsDrawable">
         <item>pancake</item>
@@ -208,9 +205,8 @@
     </string-array>
 
     <string-array name="menu4desserts">
-        <item>Wrap au poulet</item>
-        <item>Tomates</item>
-        <item>Tapas</item>
+        <item>Pancakes</item>
+        <item>Chocolat</item>
     </string-array>
     <string-array name="menu4dessertsDrawable">
         <item>pancake</item>

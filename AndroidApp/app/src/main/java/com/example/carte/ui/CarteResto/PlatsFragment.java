@@ -42,7 +42,7 @@ public class PlatsFragment extends Fragment {
         }
 
         // added data from arraylist to adapter class.
-        CustomAdapter adapter=new CustomAdapter(itemArrayList,getContext());
+        CustomAdapter adapter=new CustomAdapter(itemArrayList,getContext(),0);
 
         // setting grid layout manager to implement grid view.
         // in this method '2' represents number of columns to be displayed in grid view.

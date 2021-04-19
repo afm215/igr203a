@@ -27,10 +27,12 @@ import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
     private ArrayList<ItemData> itemArrayList;
     private Context context;
+    private int onMenu = 0;
 
-    public CustomAdapter(ArrayList<ItemData> itemArrayList_,Context context) {
+    public CustomAdapter(ArrayList<ItemData> itemArrayList_,Context context, int onMenu) {
         this.itemArrayList = itemArrayList_;
         this.context = context;
+        this.onMenu = onMenu;
     }
 
 
@@ -38,8 +40,16 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // Create a new view, which defines the UI of the list item
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_layout_carte, parent, false);
+        View view;
+        if (onMenu==1){
+            view = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.item_layout_menu, parent, false);
+        }
+        else{
+            view = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.item_layout_carte, parent, false);
+        }
+
 
         return new ViewHolder(view);
 
@@ -69,29 +79,33 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             imageView = itemView.findViewById(R.id.imageView);
 
             ImageButton infoIcon = itemView.findViewById(R.id.info_icon);
-            amount = itemView.findViewById(R.id.amount);
-            minus = itemView.findViewById(R.id.imageView3);
-            plus = itemView.findViewById(R.id.imageView2);
 
-            minus.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    System.out.println("Waaaaaarining");
-                    System.out.println(amount.getText().toString());
-                    int quantity = Integer.parseInt(amount.getText().toString());
-                    if (quantity >0){
-                        quantity --;
-                        amount.setText(Integer.toString(quantity));
+            if (onMenu==0){
+                amount = itemView.findViewById(R.id.amount);
+                minus = itemView.findViewById(R.id.imageView3);
+                plus = itemView.findViewById(R.id.imageView2);
+
+                minus.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println("Waaaaaarining");
+                        System.out.println(amount.getText().toString());
+                        int quantity = Integer.parseInt(amount.getText().toString());
+                        if (quantity >0){
+                            quantity --;
+                            amount.setText(Integer.toString(quantity));
+                        }
                     }
-                }
-            });
+                });
 
-            plus.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    amount.setText(Integer.toString(Integer.parseInt(amount.getText().toString()) + 1));
-                }
-            });
+                plus.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        amount.setText(Integer.toString(Integer.parseInt(amount.getText().toString()) + 1));
+                    }
+                });
+            }
+
 
 
             infoIcon.setOnClickListener(new View.OnClickListener() {
