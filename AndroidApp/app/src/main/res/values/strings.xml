@@ -135,10 +135,12 @@
     <string-array name="menu2entrees">
         <item>Tomates</item>
         <item>Tapas</item>
+        <item>Pastèque</item>
     </string-array>
     <string-array name="menu2entreesDrawable">
         <item>tomates</item>
         <item>tapas</item>
+        <item>pasteque</item>
     </string-array>
 
     <string-array name="menu2plats">
@@ -151,12 +153,16 @@
     </string-array>
 
     <string-array name="menu2desserts">
+        <item>Glace 3 boules</item>
+        <item>Chocolat</item>
+        <item>Pancakes</item>
         <item>Donut</item>
-        <item>Pastèque</item>
     </string-array>
     <string-array name="menu2dessertsDrawable">
+        <item>glace</item>
+        <item>chocolat</item>
+        <item>pancake</item>
         <item>donut</item>
-        <item>pasteque</item>
     </string-array>
 
     <string-array name="menu3entrees">

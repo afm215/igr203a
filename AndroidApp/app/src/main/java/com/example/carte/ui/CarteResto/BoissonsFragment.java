@@ -1,9 +1,13 @@
 package com.example.carte.ui.CarteResto;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -37,11 +41,6 @@ public class BoissonsFragment extends Fragment {
         recyclerView = root.findViewById(R.id.recyclerViewCarte);
 
 
-        /***************************************/
-        String researchresult  = ((MainActivity) getActivity()).searchfield.getText().toString();
-        /****************************************/
-
-
         // created new array list..
         itemArrayList = new ArrayList<>();
         for (int i=0;i<boissonsListe.length;i++){
@@ -60,6 +59,35 @@ public class BoissonsFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
 
+        EditText editResearch  = ((MainActivity) getActivity()).searchfield;
+        editResearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // created new array list..
+                itemArrayList = new ArrayList<>();
+                for (int i=0;i<boissonsListe.length;i++){
+                    if (boissonsListe[i].toLowerCase().contains(s.toString().trim().toLowerCase())) {
+                        int resourceId = getResources().getIdentifier(drawablesListe[i], "drawable", getContext().getPackageName());
+                        itemArrayList.add(new ItemData(boissonsListe[i], resourceId));
+                    }
+                }
+
+                // added data from arraylist to adapter class.
+                CustomAdapter adapter=new CustomAdapter(itemArrayList,getContext(),0);
+
+                recyclerView.setAdapter(adapter);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
 
         return root;
     }
