@@ -54,6 +54,12 @@ public class DessertsFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
 
+        ArrayList<Integer> listOfResources = new ArrayList<>();
+        for (int i=0;i<dessertsListe.length;i++){
+            int resourceId = getResources().getIdentifier(drawablesListe[i], "drawable", getContext().getPackageName());
+            listOfResources.add(resourceId);
+        }
+
         EditText editResearch  = ((MainActivity) getActivity()).searchfield;
         editResearch.addTextChangedListener(new TextWatcher() {
             @Override
@@ -67,7 +73,7 @@ public class DessertsFragment extends Fragment {
                 itemArrayList = new ArrayList<>();
                 for (int i=0;i<dessertsListe.length;i++){
                     if (dessertsListe[i].toLowerCase().contains(s.toString().trim().toLowerCase())) {
-                        int resourceId = getResources().getIdentifier(drawablesListe[i], "drawable", getContext().getPackageName());
+                        int resourceId = listOfResources.get(i);
                         itemArrayList.add(new ItemData(dessertsListe[i], resourceId));
                     }
                 }

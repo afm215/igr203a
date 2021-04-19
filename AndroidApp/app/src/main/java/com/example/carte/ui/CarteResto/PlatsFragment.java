@@ -56,6 +56,12 @@ public class PlatsFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
 
+        ArrayList<Integer> listOfResources = new ArrayList<>();
+        for (int i=0;i<platsListe.length;i++){
+            int resourceId = getResources().getIdentifier(drawablesListe[i], "drawable", getContext().getPackageName());
+            listOfResources.add(resourceId);
+        }
+
         EditText editResearch  = ((MainActivity) getActivity()).searchfield;
         editResearch.addTextChangedListener(new TextWatcher() {
             @Override
@@ -69,7 +75,7 @@ public class PlatsFragment extends Fragment {
                 itemArrayList = new ArrayList<>();
                 for (int i=0;i<platsListe.length;i++){
                     if (platsListe[i].toLowerCase().contains(s.toString().trim().toLowerCase())) {
-                        int resourceId = getResources().getIdentifier(drawablesListe[i], "drawable", getContext().getPackageName());
+                        int resourceId = listOfResources.get(i);
                         itemArrayList.add(new ItemData(platsListe[i], resourceId));
                     }
                 }
