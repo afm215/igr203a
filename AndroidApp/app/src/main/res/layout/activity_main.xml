@@ -29,6 +29,7 @@
                 android:background="@color/purple_500"
                  >
             <EditText
+                android:id="@+id/searchfield"
                 android:hint="Rechercher"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>

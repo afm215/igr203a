@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.carte.MainActivity;
 import com.example.carte.R;
 import com.example.carte.ui.CustomAdapter;
 import com.example.carte.ui.ItemData;
@@ -34,6 +35,12 @@ public class BoissonsFragment extends Fragment {
         boissonsListe = getResources().getStringArray(R.array.boissonsListe);
         drawablesListe = getResources().getStringArray(R.array.boissonsDrawable);
         recyclerView = root.findViewById(R.id.recyclerViewCarte);
+
+
+        /***************************************/
+        String researchresult  = ((MainActivity) getActivity()).searchfield.getText().toString();
+        /****************************************/
+
 
         // created new array list..
         itemArrayList = new ArrayList<>();
