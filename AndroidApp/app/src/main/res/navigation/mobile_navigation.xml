@@ -84,5 +84,10 @@
         tools:layout="@layout/fragment_commande"
         />
 
+    <fragment
+        android:id="@+id/navigation_langue"
+        android:name="com.example.carte.LanguageFragment"
+        />
+
     
 </navigation>
