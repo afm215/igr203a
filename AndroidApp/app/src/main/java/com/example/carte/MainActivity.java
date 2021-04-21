@@ -71,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
         graph.setStartDestination(R.id.navigation_table_num);
         navController.setGraph(graph);
 
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+
         NavigationUI.setupWithNavController(navigationView, navController);
 
 
@@ -114,7 +116,12 @@ public class MainActivity extends AppCompatActivity {
         appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_carte, R.id.navigation_menus,R.id.navigation_commande,R.id.navigation_table_num, R.id.navigation_langue).setOpenableLayout(drawerLayout)
                 .build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view_main);
+        Menu nav_Menu = navigationView.getMenu();
+        nav_Menu.findItem(R.id.navigation_carte).setVisible(true);
+        nav_Menu.findItem(R.id.navigation_menus).setVisible(true);
+        nav_Menu.findItem(R.id.navigation_commande).setVisible(true);
 
     }
 
@@ -129,5 +136,11 @@ public class MainActivity extends AppCompatActivity {
                 R.id.navigation_carte, R.id.navigation_menus,R.id.navigation_commande,R.id.navigation_table_num, R.id.navigation_langue).setOpenableLayout(null)
                 .build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view_main);
+        Menu nav_Menu = navigationView.getMenu();
+        nav_Menu.findItem(R.id.navigation_carte).setVisible(false);
+        nav_Menu.findItem(R.id.navigation_menus).setVisible(false);
+        nav_Menu.findItem(R.id.navigation_commande).setVisible(false);
     }
 }
