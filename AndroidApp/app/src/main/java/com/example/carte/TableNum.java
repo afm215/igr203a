@@ -22,6 +22,8 @@ public class TableNum extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        ((MainActivity)getActivity()).clearHamburger();
         View root = inflater.inflate(R.layout.fragment_table_num, container, false);
         Button button =  (Button) root.findViewById(R.id.button_num);
         numero = root.findViewById(R.id.editText);
