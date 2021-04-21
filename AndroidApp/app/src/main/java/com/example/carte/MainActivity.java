@@ -132,8 +132,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clearHamburger(){
+        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_carte, R.id.navigation_menus,R.id.navigation_commande,R.id.navigation_table_num, R.id.navigation_langue).setOpenableLayout(null)
+                R.id.navigation_carte, R.id.navigation_menus,R.id.navigation_commande,R.id.navigation_table_num, R.id.navigation_langue).setOpenableLayout(drawerLayout)
                 .build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
