@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
         searchfield = findViewById(R.id.searchfield);
 
-        
+
 
 
         Toolbar toolbar = findViewById(R.id.toolbar);
