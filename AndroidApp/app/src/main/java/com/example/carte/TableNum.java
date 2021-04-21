@@ -2,7 +2,11 @@ package com.example.carte;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +26,8 @@ public class TableNum extends Fragment {
         Button button =  (Button) root.findViewById(R.id.button_num);
         numero = root.findViewById(R.id.editText);
 
+
+
         if(((MainActivity)getActivity()).numeroDeTable == 0){
             numero.setText("");
         }
@@ -38,6 +44,7 @@ public class TableNum extends Fragment {
                 }
                 else{
                     ((MainActivity)getActivity()).numeroDeTable = Integer.parseInt(num);
+                    ((MainActivity) getActivity()).openDrawer();
                     ((MainActivity)getActivity()).navController.navigate(R.id.navigation_carte);
                 }
             }

@@ -44,8 +44,11 @@ public class FragmentCarte extends Fragment {
         navController.setGraph(graph);
 
         NavigationUI.setupWithNavController(navView, navController);
+        ((MainActivity) getActivity()).displayHumberger();
+
 
         navView.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
+
 
         return root;
     }

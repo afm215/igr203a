@@ -61,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
 
         NavigationView navigationView = findViewById(R.id.nav_view_main);
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
-        drawerLayout.openDrawer(GravityCompat.START);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = new AppBarConfiguration.Builder(
@@ -72,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
         graph.setStartDestination(R.id.navigation_table_num);
         navController.setGraph(graph);
 
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
 
@@ -109,5 +107,16 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         return super.dispatchTouchEvent(event);
+    }
+
+    public void displayHumberger(){
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+
+    }
+
+    public void openDrawer(){
+        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+        drawerLayout.openDrawer(GravityCompat.START);
+
     }
 }
